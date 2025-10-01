@@ -7,7 +7,6 @@ import CloseIcon from "../icons/close.svg";
 import DeleteIcon from "../icons/delete.svg";
 import RestartIcon from "../icons/reload.svg";
 import EyeIcon from "../icons/eye.svg";
-import GithubIcon from "../icons/github.svg";
 import { List, ListItem, Modal, showToast } from "./ui-lib";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -543,7 +542,7 @@ export function McpMarketPage() {
                   </span>
                 )}
                 {!loadingStates[server.id] && getServerStatusDisplay(server.id)}
-                {server.repo && (
+                {/* {server.repo && (
                   <a
                     href={server.repo}
                     target="_blank"
@@ -553,7 +552,7 @@ export function McpMarketPage() {
                   >
                     <GithubIcon />
                   </a>
-                )}
+                )} */}
               </div>
               <div className={styles["tags-container"]}>
                 {server.tags.map((tag, index) => (

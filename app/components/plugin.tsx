@@ -1,7 +1,6 @@
 import { useDebouncedCallback } from "use-debounce";
 import OpenAPIClientAxios from "openapi-client-axios";
 import yaml from "js-yaml";
-import { PLUGINS_REPO_URL } from "../constant";
 import { IconButton } from "./button";
 import { ErrorBoundary } from "./error";
 
@@ -14,7 +13,6 @@ import CloseIcon from "../icons/close.svg";
 import DeleteIcon from "../icons/delete.svg";
 import ConfirmIcon from "../icons/confirm.svg";
 import ReloadIcon from "../icons/reload.svg";
-import GithubIcon from "../icons/github.svg";
 
 import { Plugin, usePluginStore, FunctionToolService } from "../store/plugin";
 import {
@@ -130,7 +128,7 @@ export function PluginPage() {
           </div>
 
           <div className="window-actions">
-            <div className="window-action-button">
+            {/* <div className="window-action-button">
               <a
                 href={PLUGINS_REPO_URL}
                 target="_blank"
@@ -138,7 +136,7 @@ export function PluginPage() {
               >
                 <IconButton icon={<GithubIcon />} bordered />
               </a>
-            </div>
+            </div> */}
             <div className="window-action-button">
               <IconButton
                 icon={<CloseIcon />}
@@ -172,7 +170,7 @@ export function PluginPage() {
           </div>
 
           <div>
-            {plugins.length == 0 && (
+            {/* {plugins.length == 0 && (
               <div
                 style={{
                   display: "flex",
@@ -191,7 +189,7 @@ export function PluginPage() {
                   <IconButton icon={<GithubIcon />} bordered />
                 </a>
               </div>
-            )}
+            )} */}
             {plugins.map((m) => (
               <div className={styles["mask-item"]} key={m.id}>
                 <div className={styles["mask-header"]}>
