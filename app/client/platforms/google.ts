@@ -157,7 +157,8 @@ export class GeminiProApi implements LLMApi {
         //   "Title"
         // ],
         temperature: modelConfig.temperature,
-        maxOutputTokens: modelConfig.max_tokens,
+        // maxOutputTokens: modelConfig.max_tokens,
+        maxOutputTokens: Math.max(modelConfig.max_tokens, 40000),
         topP: modelConfig.top_p,
         // "topK": modelConfig.top_k,
       },
